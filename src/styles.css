@@ -1,0 +1,73 @@
+/* Default light theme styles (light mode) */
+:root {
+    --background-color: #ffffff;
+    --text-color: #333;
+    --button-background: #4CAF50;
+    --button-text-color: #ffffff;
+    --link-color: #1e90ff;
+    --input-background: #f0f0f0;
+    --input-border-color: #ccc;
+    --input-text-color: #333;
+  }
+  
+  /* Dark theme styles */
+  body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --button-background: #555;
+    --button-text-color: #fff;
+    --link-color: #4CAF50;
+    --input-background: #444;
+    --input-border-color: #666;
+    --input-text-color: #fff;
+  }
+  
+  /* Apply background and text color for the body */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the buttons globally */
+  button {
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style the links globally */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style inputs and form elements globally */
+  input, select, textarea {
+    background-color: var(--input-background);
+    border: 1px solid var(--input-border-color);
+    color: var(--input-text-color);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Make sure dark mode applies to other elements as needed */
+  .dark-mode .darkmode-toggle {
+    background-color: #555;
+  }
+  
+  .dark-mode .darkmode-label {
+    color: var(--text-color);
+  }
+  
+
+  

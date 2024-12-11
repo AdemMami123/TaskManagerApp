@@ -1,0 +1,79 @@
+/* General Styles for Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Card Styling */
+  .card {
+    border-radius: 15px;
+  }
+  
+  /* Card Header (Shared with Login) */
+  .card-header {
+    background: linear-gradient(135deg, #4caf50, #2196f3);
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .card-header h3 {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Card Body */
+  .card-body {
+    background-color: #ffffff;
+  }
+  
+  /* Input Fields */
+  .form-control {
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .form-control:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+  }
+  
+  /* Button Styling */
+  .btn-primary {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #45a047;
+    border-color: #45a047;
+  }
+  
+  /* Links */
+  .text-primary {
+    font-weight: 500;
+    color: #2196f3;
+  }
+  
+  a.text-primary:hover {
+    text-decoration: underline;
+  }
+  
+  /* Centered Text */
+  .text-center p {
+    color: #666;
+  }
+  
+  /* Responsive Blockform */
+  .blockform {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  

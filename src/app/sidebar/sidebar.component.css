@@ -1,0 +1,10 @@
+/* Sidebar */
+.sidebar {
+    height: calc(100vh - 90px - 50px); /* Assuming navbar is 60px and footer is 50px */
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds the available space */
+    position: sticky; /* Keep the sidebar fixed as the user scrolls */
+    top: 0; /* Ensure the sidebar starts from the top of the screen */
+    padding: 10px; /* Optional padding */
+    box-sizing: border-box; /* Include padding in the height calculation */
+  }
+  

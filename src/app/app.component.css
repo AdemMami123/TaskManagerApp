@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;           /* Make sure the body takes the full height */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    min-height: 100vh;       /* Ensure the wrapper takes at least the viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1;                 /* Push the footer to the bottom by taking remaining space */
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  

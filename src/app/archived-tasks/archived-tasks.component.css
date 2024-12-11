@@ -1,0 +1,41 @@
+/* Customize card styles */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+  .card-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Customize the card hover effect */
+  .card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  
+  /* Container Padding */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Center the Title */
+  .text-center {
+    text-align: center;
+  }
+  

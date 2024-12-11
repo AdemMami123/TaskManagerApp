@@ -1,0 +1,89 @@
+/* Agenda container with reduced height */
+.agenda {
+  width: 80%;
+  max-width: 750px;
+  height: 80vh;  /* Reduced height of the whole agenda */
+  margin: 35px auto 0;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Header section for navigating months */
+.agenda-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Reduced space */
+  font-size: 16px; /* Smaller font size for the header */
+}
+
+/* Button styles in the header */
+.agenda-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px; /* Smaller button size */
+}
+
+/* The grid displaying the days of the calendar */
+.agenda-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px; /* Reduced gap between cells */
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Style for the day headers (Sun, Mon, Tue, etc.) */
+.agenda-day-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px; /* Smaller font size for the headers */
+}
+
+/* Individual days in the calendar */
+.agenda-day {
+  padding: 8px; /* Reduced padding */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 70px; /* Reduced minimum height for the days */
+  position: relative;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 12px; /* Smaller font size inside days */
+  overflow-y: hidden;
+}
+
+/* Highlight the current date */
+.agenda-day.current-date {
+  border: 2px solid #007bff;
+}
+
+/* Styles for tasks with different statuses */
+.agenda-day.inprogress {
+  background-color: #ffcccc;
+}
+
+.agenda-day.completed {
+  background-color: #dcdcdc;
+}
+
+/* Styling for the list of tasks in each day */
+.agenda-day ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0;
+  overflow-y: auto;  /* Allow scrolling if the task list is too long */
+  height: 70px;  /* Limit the height for the task list */
+}
+
+.agenda-day ul li {
+  font-size: 12px;  /* Smaller task font size */
+}

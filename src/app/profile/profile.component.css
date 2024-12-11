@@ -1,0 +1,17 @@
+.container {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  form {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,218 @@
+/* General Habit Tracker Styles */
+.habit-tracker {
+  margin: 30px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #f0f4f7, #e1eff6);
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styling */
+.habit-tracker h3 {
+  text-align: center;
+  color: #3a3a3a;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Add Habit Form */
+.add-habit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: slideUp 1s ease-out;
+}
+
+/* Form Input & Button Styles */
+.input-title,
+.select-frequency,
+.input-goal,
+.btn-add {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 250px;
+}
+
+.input-title:focus,
+.select-frequency:focus,
+.input-goal:focus {
+  border-color: #4caf50;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-add {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.btn-add:hover {
+  background-color: #45a047;
+  transform: translateY(-2px);
+}
+
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+/* Habits Table */
+.habit-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  animation: fadeInTable 0.8s ease-in-out;
+}
+
+.habit-table th,
+.habit-table td {
+  padding: 16px 24px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 16px;
+  color: #333;
+}
+
+.habit-table th {
+  background-color: #4caf50;
+  color: white;
+  text-transform: uppercase;
+}
+
+.habit-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.habit-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.habit-table td {
+  color: #333;
+}
+
+/* Action Buttons */
+.btn-delete,
+.btn-edit {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #e53935;
+}
+
+.btn-edit {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #fb8c00;
+}
+
+/* No Habits Message */
+.no-habits-message {
+  text-align: center;
+  color: #718096;
+  font-size: 18px;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-habit-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-title,
+  .select-frequency,
+  .input-goal,
+  .btn-add {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .habit-table {
+    font-size: 14px;
+  }
+}

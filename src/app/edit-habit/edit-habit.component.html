@@ -1,0 +1,72 @@
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+    <div
+      id="updateToast"
+      class="toast align-items-center text-bg-success border-0"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="d-flex">
+        <div class="toast-body">Habit updated successfully!</div>
+        <button
+          type="button"
+          class="btn-close me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Edit Habit</h4>
+          </div>
+          <div class="card-body" *ngIf="habit"> <!-- Render only if habit data is loaded -->
+            <form (ngSubmit)="onSubmit()" #habitForm="ngForm">
+              <div class="form-group mb-3">
+                <label for="name" class="form-label">Habit Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  name="name"
+                  [(ngModel)]="habit.name"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="description" class="form-label">Habit Description</label>
+                <textarea
+                  id="description"
+                  class="form-control"
+                  name="description"
+                  [(ngModel)]="habit.description"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div class="form-group mb-3">
+                <label for="frequency" class="form-label">Frequency</label>
+                <input
+                  type="text"
+                  id="frequency"
+                  class="form-control"
+                  name="frequency"
+                  [(ngModel)]="habit.frequency"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Update Habit</button>
+            </form>
+          </div>
+          <div *ngIf="!habit" class="text-center mt-3">
+            <p>Loading habit data...</p> <!-- Loading state -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

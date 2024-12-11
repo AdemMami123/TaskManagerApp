@@ -1,0 +1,43 @@
+/* Ensure the entire page fills the viewport */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Fullscreen Container */
+.container-fluid {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Header Section */
+header {
+  background: url('/assets/images/back.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Centered Content Styling */
+header .container {
+  text-align: center;
+  color: white;
+}
+
+/* Header Title */
+header h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Header Button */
+header .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+}

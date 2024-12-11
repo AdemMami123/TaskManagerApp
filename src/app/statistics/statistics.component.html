@@ -1,0 +1,48 @@
+<div class="statistics">
+  <h3>Task Statistics</h3>
+
+  <!-- Circular Progress Indicators for Completed, Pending, and Overdue Tasks -->
+  <div class="circle-container">
+    <div class="circle-stat">
+      <svg class="circle" viewBox="0 0 36 36">
+        <path class="circle-background" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+        <path class="circle-progress completed" [attr.stroke-dasharray]="completedTasksPercentage + ' 100'" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+      </svg>
+      <span class="percentage">{{ completedTasksPercentage }}%</span>
+      <span>Completed</span>
+    </div>
+
+    <div class="circle-stat">
+      <svg class="circle" viewBox="0 0 36 36">
+        <path class="circle-background" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+        <path class="circle-progress pending" [attr.stroke-dasharray]="pendingTasksPercentage + ' 100'" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+      </svg>
+      <span class="percentage">{{ pendingTasksPercentage }}%</span>
+      <span>Pending</span>
+    </div>
+
+    <div class="circle-stat">
+      <svg class="circle" viewBox="0 0 36 36">
+        <path class="circle-background" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+        <path class="circle-progress overdue" [attr.stroke-dasharray]="overdueTasksPercentage + ' 100'" d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.8311"></path>
+      </svg>
+      <span class="percentage">{{ overdueTasksPercentage }}%</span>
+      <span>In Progress</span>
+    </div>
+  </div>
+
+  <!-- Overall Progress Bar -->
+  <div class="progress-bar-container">
+    <h4>Overall Progress</h4>
+    <div class="progress">
+      <div class="progress-bar" 
+           role="progressbar" 
+           [style.width]="(completedTasks / totalTasks) * 100 + '%'" 
+           [attr.aria-valuenow]="completedTasks" 
+           [attr.aria-valuemin]="0" 
+           [attr.aria-valuemax]="totalTasks">
+        <span>{{ (completedTasks / totalTasks) * 100 | number: '1.0-0' }}%</span>
+      </div>
+    </div>
+  </div>
+</div>

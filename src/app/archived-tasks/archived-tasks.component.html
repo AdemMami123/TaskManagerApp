@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h2 class="text-center">Archived Tasks</h2>
+
+  <!-- Show message when no archived tasks -->
+  <div *ngIf="archivedTasks.length === 0" class="alert alert-info">
+    No archived tasks found.
+  </div>
+
+  
+
+  <!-- Display archived tasks -->
+  <div *ngFor="let task of archivedTasks" class="card mb-3" style="max-width: 100%; background-color: #f8f9fa;">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ task.title }}</h5>
+          <p class="card-text">{{ task.description }}</p>
+          <p class="card-text">
+            <small class="text-muted">Status: {{ task.status }}</small>
+          </p>
+          <p class="card-text">
+            <small class="text-muted">Due Date: {{ task.dueDate | date }}</small>
+          </p>
+          
+
+          <!-- Button to unarchive the task -->
+          <button class="btn btn-warning" (click)="unarchiveTask(task._id)">
+            Unarchive Task
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="habit-tracker">
+  <h3>Habit Tracker</h3>
+
+  <!-- Add New Habit Section -->
+  <div class="add-habit-form">
+    <input
+      [(ngModel)]="newHabitTitle"
+      placeholder="Enter habit title"
+      class="input-title"
+    />
+    <select [(ngModel)]="newHabitFrequency" class="select-frequency">
+      <option value="daily">Daily</option>
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+    </select>
+    <input
+      [(ngModel)]="newHabitGoal"
+      placeholder="Set a goal (optional)"
+      class="input-goal"
+      type="number"
+    />
+    <button (click)="createHabit()" class="btn-add">Add Habit</button>
+  </div>
+
+  <!-- Display Habits in a Table -->
+  <div class="table-container">
+    <table class="habit-table" *ngIf="habits.length > 0">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Frequency</th>
+          <th>Goal</th>
+          <th>Progress</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let habit of habits">
+          <td>{{ habit.title }}</td>
+          <td>{{ habit.frequency }}</td>
+          <td>{{ habit.goal || 'No goal set' }}</td>
+          <td>
+            <div *ngIf="habit.progress.length">
+              <p>Completed: {{ getCompletedProgress(habit) }} / {{ habit.goal }}</p>
+              <progress [value]="getCompletedProgress(habit)" [max]="habit.goal"></progress>
+            </div>
+            <button (click)="markAsCompleted(habit)" *ngIf="!isCompletedToday(habit)">
+              Mark as Completed Today
+            </button>
+          </td>
+          <td>
+            <button (click)="deleteHabit(habit._id)" class="btn-delete">Delete</button>
+            <button (click)="editHabit(habit)" class="btn-edit">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Message if no habits are available -->
+  <p *ngIf="habits.length === 0" class="no-habits-message">
+    No habits found. Add a new habit!
+  </p>
+</div>

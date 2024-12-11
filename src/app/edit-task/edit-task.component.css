@@ -1,0 +1,13 @@
+.container {
+    margin-top: 50px;
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-primary {
+    width: 100%;
+  }
+  

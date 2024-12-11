@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <app-header *ngIf="showHeader"></app-header> <!-- Header is conditionally shown -->
+
+  <div class="main-layout"> <!-- Main layout container -->
+    <app-sidebar></app-sidebar> <!-- Sidebar Component -->
+    <div class="content"> <!-- Main content area -->
+      <router-outlet></router-outlet> <!-- Routed content will appear here -->
+    </div>
+  </div>
+
+  <app-footer></app-footer> <!-- Footer at the bottom -->
+</div>

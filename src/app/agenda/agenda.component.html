@@ -1,0 +1,28 @@
+<div class="agenda">
+    <div class="agenda-header">
+      <button (click)="prevMonth()">&#9664;</button>
+      <span>{{ months[currentMonth] }} {{ currentYear }}</span>
+      <button (click)="nextMonth()">&#9654;</button>
+    </div>
+  
+    <div class="agenda-grid">
+      <div class="agenda-day-header" *ngFor="let day of days">{{ day }}</div>
+      <div
+        class="agenda-day"
+        *ngFor="let date of calendarDays"
+        [ngClass]="{
+          'current-date': isToday(date),
+          'inprogress': hasTaskWithStatus(date, 'inprogress'),
+          'completed': hasTaskWithStatus(date, 'completed')
+        }"
+      >
+        <span>{{ date.getDate() }}</span>
+        <ul>
+          <li *ngFor="let task of getTasksForDate(date)">
+            {{ task.title }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

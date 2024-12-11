@@ -1,0 +1,50 @@
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+  <div
+    id="updateToast"
+    class="toast align-items-center text-bg-success border-0"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <div class="d-flex">
+      <div class="toast-body">Task Created successfully!</div>
+      <button
+        type="button"
+        class="btn-close me-2 m-auto"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+      ></button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Create a New Task</h4>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+              <div class="form-group mb-3">
+                <label for="title" class="form-label">Task Title</label>
+                <input type="text" id="title" class="form-control" name="title" [(ngModel)]="task.title" required>
+              </div>
+              <div class="form-group mb-3">
+                <label for="description" class="form-label">Task Description</label>
+                <textarea id="description" class="form-control" name="description" [(ngModel)]="task.description"></textarea>
+              </div>
+              <div class="form-group mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" id="dueDate" class="form-control" name="dueDate" [(ngModel)]="task.dueDate">
+              </div>
+              <button type="submit" class="btn btn-primary">Create Task</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

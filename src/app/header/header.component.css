@@ -1,0 +1,75 @@
+/* Notification Dropdown Styles */
+.dropdown-menu {
+  background-color: #fff; /* White background for dropdown */
+  border: 1px solid #eaeaea; /* Light border for dropdown */
+  border-radius: 0.5rem; /* Rounded corners */
+  width: 320px; /* Fixed width for consistency */
+  max-height: 400px; /* Limit the height */
+  overflow-y: auto; /* Scroll if content exceeds max height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 1000; /* Ensure dropdown appears above other elements */
+}
+
+.dropdown-header {
+  font-weight: bold; /* Make the header bold */
+  font-size: 1.25rem; /* Larger font size for header */
+  padding: 1rem; /* Space for header */
+  border-bottom: 1px solid #eaeaea; /* Divider line below header */
+  background-color: #f8f9fa; /* Light gray background for header */
+  border-radius: 0.5rem 0.5rem 0 0; /* Rounded top corners */
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem; /* Padding for dropdown items */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  display: flex; /* Flex layout for items */
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Center items vertically */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Notification icon styles */
+.nav-link {
+  color: #495057; /* Icon color */
+  position: relative; /* Position relative for badge placement */
+  transition: color 0.3s; /* Smooth transition for icon color */
+}
+
+/* Change icon color on hover */
+.nav-link:hover {
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Remove button styles */
+.btn-outline-danger {
+  border-color: transparent; /* Remove border color */
+  transition: border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Change button styles on hover */
+.btn-outline-danger:hover {
+  border-color: #dc3545; /* Red border on hover */
+  color: #dc3545; /* Red color on hover */
+}
+
+/* Adjust position of badge */
+.position-absolute {
+  top: 0.25rem; /* Adjust top position */
+  right: 0.25rem; /* Adjust right position */
+  background-color: #dc3545; /* Red background for badge */
+  color: #fff; /* White text color for badge */
+  padding: 0.3rem 0.5rem; /* Increased padding for better sizing */
+  border-radius: 1rem; /* Circular badge */
+  font-size: 0.75rem; /* Smaller font size for badge */
+  min-width: 20px; /* Minimum width for the badge */
+  height: 20px; /* Fixed height for the badge */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
