@@ -1,0 +1,3 @@
+[submodule "frontend/task-manager"]
+	path = frontend/task-manager
+	url = https://github.com/AdemMami123/TaskManagerApp.git
